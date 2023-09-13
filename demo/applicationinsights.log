@@ -1,0 +1,5 @@
+2023-09-12 10:24:22.321Z INFO  c.m.applicationinsights.agent - Application Insights Java Agent 3.4.16 started successfully (PID 3704780, JVM running for 3.968 s)
+2023-09-12 10:24:22.332Z INFO  c.m.applicationinsights.agent - Java version: 17.0.4.1, vendor: Microsoft, home: /home/tsubasa/.sdkman/candidates/java/17.0.4.1-ms
+2023-09-12 10:26:05.957Z ERROR c.azure.core.http.policy.RetryPolicy - {"az.sdk.message":"Retry attempts have been exhausted.","exception":"connection timed out: /169.254.169.254:80","tryCount":3}
+2023-09-12 10:27:58.954Z INFO  c.m.applicationinsights.agent - Application Insights Java Agent 3.4.16 started successfully (PID 3707565, JVM running for 3.023 s)
+2023-09-12 10:27:58.959Z INFO  c.m.applicationinsights.agent - Java version: 17.0.4.1, vendor: Microsoft, home: /home/tsubasa/.sdkman/candidates/java/17.0.4.1-ms
