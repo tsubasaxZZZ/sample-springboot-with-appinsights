@@ -1,0 +1,1 @@
+applicationinsights-agent-3.4.16.jar filter=lfs diff=lfs merge=lfs -text
