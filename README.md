@@ -42,3 +42,22 @@ make build-k8sdeploy-yaml AI_CONNECTION_STRING="InstrumentationKey=xxxxxxxxxxxxx
 ```
  make build-push AI_CONNECTION_STRING="InstrumentationKey=xxxxxxxx;IngestionEndpoint=https://japaneast-1.in.applicationinsights.azure.com/;LiveEndpoint=https://japaneast.livediagnostics.monitor.azure.com/" IMAGE_NAME=tsubasaxzzz/demo-spring-openjdkms TAG=0.2
  ``````
+
+# ACR タスクを使ってビルドする方法
+
+```bash
+ACR_NAME=<acrname>
+GIT_PAT=<gitpat>
+
+# ACR タスクの作成
+az acr task create \
+--registry $ACR_NAME \
+--name tasksamplespring \
+--image sample-spring:{{.Run.ID}} \
+-context "https://github.com/tsubasaxZZZ/sample-springboot-with-appinsights#main"
+--file Dockerfile 
+--git-access-token $GIT_PAT
+
+# テストする
+az acr task run --registry $ACR_NAME --name tasksamplespring
+```
